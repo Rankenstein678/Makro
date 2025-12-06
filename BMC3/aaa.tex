@@ -1,0 +1,177 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage{mathptmx}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{booktabs}
+%\usepackage{chemstyle}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage[ngerman] {babel} 
+\usepackage{footnotehyper}
+\makesavenoteenv{table}
+\usepackage{csquotes}
+\makesavenoteenv{tabular}
+\usepackage{biblatex}
+\usepackage{rotating}
+\addbibresource{AMC3.bib}
+
+\sisetup{round-mode=none,separate-uncertainty=true}
+
+\usepackage{acronym}
+\newcommand{\subtxt}[1]{_{\text{#1}}}
+\author{}
+\title{
+
+{\Huge \uppercase {BMC3 B G15 V1}}
+\vfill
+	 	\rule{\linewidth}{2pt} \\[6pt] 
+	 	\huge BMC3 B - Magnetresonanzspektroskopie \\ 
+	 	\rule{\linewidth}{2pt} 
+	 \vfill
+	
+	
+	\large
+	Autoren: \hfill Jess Singrin, Lennart Appel, Phillip Zazzetta\\
+	Gruppennummer: \hfill 15\\
+	Mails: \hfill jess.singrin@rwth-aachen.de\\\hfill lennart.appel@rwth-aachen.de\\\hfill phillip.zazzetta@rwth-aachen.de
+
+}
+
+
+	
+\date{November 2025}
+
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty} 
+\clearpage
+\tableofcontents
+\thispagestyle{empty} 
+\clearpage
+\section{Einleitung}
+In diesem Experiment wir sich mit der analysischen Methode der NMR-Spektroskopie befasst. Dabei werden die Spektren von zwei unbekannten Chemikalien analysiert und bestimmt. Außerdem wird das Spektrum der Knorr-Pyrrol-Synthese analysiert und interpretiert.  
+
+\section{Theorie}
+\subsection{Grundlagen}
+ Die NMR-Spektroskopie (Nuclear magnetic resonance) ist eine Analytische Methode, um Strukturen von unbekannten Molekülen zu bestimmen. 
+ NMR basiert auf die Eigenschaft der Atomkerne bestimmter Isotope, einen Kernspin (Drehimpuls) zu haben der nicht null beträgt. Diese Isotope können sich wie eine Kompassnadel in einem Magnetfeld ausrichten.
+ Die Kernspinquantenzahl $l$ kann nur Vielfache von $1/2$ annehmen und hängt von der Anzahl an Protonen und Neutronen des Atomkerns ab. 
+ Der simpelste spinaktive Atomkern ist der des $^1\text{H}$ Atoms mit einer Kernspinzahl von $l = 1/2$ und einer natürlichen Häufigkeit von über 99\%, es ist deshalb überall zu finden und eignet sich perfekt für die NMR-Spektroskopie. Es existieren viele weitere spinaktive Atomkerne verschiedenster Isotopen, diese sind für die fortlaufende Erläuterung jedoch nicht wichtig, da in diesem Experiment nur $^1\text{H}$ Spektren analysiert werden.    
+
+In dem NMR-Gerät befindet sich ein Magnet, welcher ein konstantes  Magnetfeld $B_\text{0}$ erzeugt. Ein Kern kann in diesem externen Magnetfeld verschiedene Zustände einnehmen, bei $^1\text{H}$ sind es 2 Zustände: 
+\begin{equation}
+    m_\text{l} = 2\cdot 1/2 +1 = 2 
+\end{equation}
+\noindent
+Die beiden Zustände können $\alpha$ für $m_\text{l} = 1/2$ (parallel zu $B_\text{0}$) und $\beta$ für $m_\text{l} = -1/2$ (anti-parallel zu $B_\text{0}$) zugewiesen werden. Ohne ein externes Magnetfeld sind diese Zustände entartet, mit  $B_\text{0}$ existiert jedoch eine Energiedifferenz, dieses verhalten wird als "Zeemann-Effekt" bezeichnet. 
+Der $\alpha$-Zustand ist jedoch leicht energetisch günstiger, aus der Energiedifferenz der beiden Niveaus kann die Lamor-Frequenz $v_\text{0}$ der emittierten Strahlung berechnet werden.
+Durch die Energiedifferenz entsteht eine Besetzungszahldifferenz, aus der die makroskopische Magnetisierung resultiert. Diese Magnetisierung präzediert mit der Lamor-Frequenz um das externe Magnetfeld $B_\text{0}$, durch aufsummieren dieser verschiedenen magnetischen Momente kann ein magnetisches Gesamtmoment $M_\text{0}$ richtung Z-Achse und $B_\text{0}$ dargestellt werden. 
+Um nun ein Spektrum zu messen wird von einer Spule, welche orthogonal zu $B_\text{0}$ steht und ein weiteres kleines elektromagnetisches Feld $B_\text{1}$ dass mit der Lamor-Frequenz oszilliert erzeugt, ein Puls in $90°$  
+
+
+
+
+
+\subsection{Relaxation}
+
+
+\subsection{Chemische Verschiebung \& $j$-Kupplung }
+
+
+
+
+
+\section{Auswertung}
+\subsection{Auswertung der unbekannten Proben}
+\subsubsection{1A}
+Probe 1A lag als Reinstoff vor. Im NMR Spektrum (siehe Abb. \ref{fig:1A}) lassen sich 3 Signale ausmachen. Signal A bei \SI{4.84}{ppm} liegt als Triplett vor. Signal B bei \SI{3.08}{ppm} ist ein Quintett. Signal C ist ein Triplett bei \SI{0.67}{ppm}. Die Spezies der Signale A, B und C liegen im Verhältnis 1:2:3 vor. Die untersuchte Substanz ist \emph{Ethanol}. (siehe Abb. \ref{fig:1Asol} Die Protonen liegen wie durch die Integrale vorausgesagt im Verhältnis 1:2:3 vor. Proton A kann mit beiden B Protonen J-Koppeln, was im Triplett sichbar wird. Es ist durch das elektronegative Sauerstoff Atom stark entschirmt und daher Tieffeld verschoben. Die B Protonen können mit allen vier anderen Protonen koppeln und erzeugen daher ein Quintett. Durch ihren höheren Abstand zum Sauerstoff sind sie schwächer Tieffeld verschoben. Auch die Methylgruppe ist kann mit 2 Protonen koppeln und erzeugt daher ein sehr schwach verschobenes Triplett.
+\begin{figure}
+    \centering
+    \includegraphics[width=.5\linewidth]{Ethanol.pdf}
+    \caption{Substanz 1A}
+    \label{fig:1Asol}
+\end{figure}
+\subsubsection{3A}
+In Probe 3A können 2 Signale beobachtet werden (Abb. \ref{fig:3A}). Signal A bei \SI{3.61}{ppm} in Form eines Triplets und Signal B bei \SI{1.76}{ppm} in Form eines Quintetts. Die Probe war in DSMO gelöst, weshalb bei \SI{2.50}{ppm} ein Lösemittelpeak beobachtet wird. Das Löselmittel erzeugt bei \SI{3.30}{ppm} einen weiteren Peak welcher Signal A teilweise überdeckt. A  und B Protonen liegen in gleichem Verhältnis vor. Die die A Protonen stärker entschirmt und können mit 2 Protonen koppeln. Die Protonen sind nur schwach entschirmt und koppeln mit 4 Protonen. Demnach ist der Stoff \emph{Tetrahydrofuran} (THF) (Abb. \ref{fig:3Asol}). Die A Protonen werden durch das elektronegative Sauerstoff Atom entschirmt und koppeln jeweils mit zwei B Protonen. DIe B Protonen koppeln mit zwei B und zwei A Protonen und sind durch die Distanz zum Sauerstoff vor Entschirmung geschützt. Beide Spezies sind im selben Verhältnis vorhanden.  
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{THF.pdf}
+    \caption{Substanz 3A}
+    \label{fig:3Asol}
+\end{figure}
+
+
+\subsection{Auswertung der Eduktspektren}
+\subsubsection{Hexandion}
+Im Hexandion-Spektrum (Abb. \ref{fig:NMRHexab}) können zwei Singulett-Signale bei \SI{2.04}{ppm} und \SI{1.50}{ppm} beobachtet werden. Signal A entspricht den mittleren Protonen (Abb. \ref{fig:Hexandion}). Diese sind durch beide Sauerstoffatome stark entschirmt. Signal B entspricht den Protonen der Methylgruppe. Signale A und B liegen genau wie ihre entsprechenden Protonen im Verhältnis 2:3 vor. Beide Protonenspezies könnten lediglich mit isotropen Protonen koppeln, weshalb sie als Singulett auftreten. Das Spektrum ist wie erwartet.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Hexandion.pdf}
+    \caption{Hexandion.}
+    \label{fig:Hexandion}
+\end{figure}
+
+\subsubsection{Aminoethanol}
+Im Spektrum von Aminoethanol (Abb. \ref{fig:NMRAmino}) lassen sich drei Signale erkennen. Signal C entspricht den Protonen der \ce{CH2} Gruppe an der Aminogruppe (Abb. \ref{fig:Aminoethanol}). Das Stickstoff ist weniger elektronegativ als das Sauerstoffatom, weshalb die C-Protonen weniger entschirmt sind. Jedoch tritt anstatt eines erwarteten Quintets lediglich ein Triplett auf. Gleich gilt für Signal B, welches den Protonen an der \ce{CH2} Gruppe in Nähe des Sauerstoffatoms entspricht. Signal A entspricht den Protonen an der Amino- und der Hydroxygruppe. Es kommt zu keiner J-Kopplung, was am Singulett Signal erkennbar ist und alle Protonen sind gleichstarkt entschirmt. Grund dafür ist, dass es zu einem konstanten Protonenaustausch zwischen Hydroxy und Aminogruppen im Aminoethanol kommt. Somit sind alle diese Protonen im zeitlichen Mittel gleichstark entschirmt. Durch den konstanten Austausch sind J-Kopplungen nicht möglich, was die Multiplizität aller Peaks erklärt. Protonen A, B und C liegen im Verhältnis 3:2:2 vor, was den Integralen entspricht. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.5\linewidth]{Aminoethanol.pdf}
+    \caption{Aminoethanol.}
+    \label{fig:Aminoethanol}
+\end{figure}
+\subsection{Auswertung einer Knorr-Pyrol-Synthese}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Reaktion.pdf}
+    \caption{Untersuchte Knorr Pyrrol Synthese.}
+    \label{fig:reaktion}
+\end{figure}
+Es wurde eine Knorr-Pyrrol-Sythese durch 1,2-Aminoethanol und 2,5-Hexandion untersucht (Abb \ref{fig:reaktion}). Hierzu wurden zunächst \SI{0.5}{\milli\liter} methanolische Hexandionlösung in ein NMR Rohr gegeben. Eine NMR Messung wurde durchgeführt und nach erfolgter Zugabe von \SI{0.5}{\milli\liter} Aminoethanol alle 15 Sekunden weitere Messungen durchgeführt. Es wurde das in Abbildung \ref{fig:RM} dargestellt Spektrum erhalten. 
+
+Im Spektrum ist Hexandion leicht als Y3 und Y4 zu identifizieren. Aus dem Aminoethanol Spektrum ist Peak Y1 als Peak für Hydroxy und Aminogruppen bekannt. Hierzu passt auch, dass der Anteil an in Hydrox und Aminogruppen gebundener Protonen durch die Bildung von Wasser stark steigt. Peak Y2 lässt sich als \ce{CH2} 
+
+Die Kinetik der Reaktion lässt sich über die Konzentration der Produkte und Edukte darstellen. Diese lassen sich durch das Verhältnis der ihnen zugeordneten Signalintegrale bestimmen (Tabelle \ref{tab:RM}). Zur Untersuchung wurde das B-Signal von Hexandion untersucht. Für Hexandion gilt bei Annahme einer Kinetik erster Ordnung.
+\begin{equation}
+    v = -\frac{d[Hexandion]}{dt} = -kt
+\end{equation}
+Sowie
+\begin{equation}
+   [Hexandion] = [Hexandion]_0 \cdot e^{-kt}
+\end{equation}
+Die Konzentration an Hexandion ist proportional zur Integral seiner Signale. Somit kann die Geschwindigkeitskonstante über einen exponentiellen Fit erhalten werden (Abb. \ref{exp. Fit}). Hierbei wurden die ersten 3 Datenpunkte aufgrund von chemisch nicht sinnvoller Schwankungen nicht betrachtet. Es folgt: $k =\SI{2.594e-2}{\mole\per\liter\per\second\squared}$
+
+
+
+\begin{sidewaysfigure}[p]
+    \centering
+    \includegraphics[width=.9\linewidth]{Gr15_1A_pure1.pdf}
+    \caption{NMR Spektrum von Probe 1A}
+    \label{fig:1A}
+\end{sidewaysfigure}
+\begin{sidewaysfigure}
+    \centering
+    \includegraphics[width=.9\linewidth]{Gr15_3A_DMSO.pdf}
+        \caption{NMR Spektrum von Probe 3A}
+    \label{fig:3A}
+\end{sidewaysfigure}
+\begin{sidewaysfigure}[p]
+    \centering
+    \includegraphics[width=.9\linewidth]{Gr15_Hexandion.pdf}
+        \caption{NMR Spektrum von Hexandion}
+    \label{fig:NMRHexab}
+\end{sidewaysfigure}
+\begin{sidewaysfigure}[p]
+    \centering
+    \includegraphics[width=.9\linewidth]{Gr15_Aminoethanol.pdf}
+        \caption{NMR Spektrum von Aminoethanol}
+    \label{fig:NMRAmino}
+\end{sidewaysfigure}
+\end{document}

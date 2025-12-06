@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage{mathptmx}
+\usepackage{siunitx}
+\usepackage[version=4]{mhchem}
+\usepackage{booktabs}
+\usepackage{rotating}
+%\usepackage{chemstyle}
+\usepackage{hyperref}
+\usepackage{lscape}
+\usepackage[ngerman] {babel} 
+\usepackage{footnotehyper}
+\makesavenoteenv{table}
+\usepackage{csquotes}
+\makesavenoteenv{tabular}
+\usepackage{biblatex}
+\addbibresource{AMC3.bib}
+
+\sisetup{round-mode=none}
+
+\usepackage{acronym}
+\newcommand{\subtxt}[1]{_{\text{#1}}}
+\author{}
+\title{
+
+{\Huge \uppercase {AMC3 G15 V2}}
+\vfill
+	 	\rule{\linewidth}{2pt} \\[6pt] 
+	 	\huge AMC3 - Kinetik der Emulsionspolymerisation \\ 
+	 	\rule{\linewidth}{2pt} 
+	 \vfill
+	
+	
+	\large
+	Autoren: \hfill Jess Singrin, Lennart Appel, Phillip Zazzetta\\
+	Gruppennummer: \hfill 15\\
+	Mails: \hfill jess.singrin@rwth-aachen.de\\\hfill lennart.appel@rwth-aachen.de\\\hfill phillip.zazzetta@rwth-aachen.de \\
+	Tag der Durchführung: \hfill 13.11.2025 \\
+	Abgabe 1: \hfill     \\ %zu ergänzen
+    Abgabe 2  \hfill    %zu ergänzen
+}
+
+	
+	
+\date{Dezember 2025}
+
+\begin{document}
+\section{Abkürzungsverzeichnis}
+\begin{acronym}
+\acro{PMMA}{Polymethylmetacrylat}
+\acro{SDS}{Natriumlaurylsulfat}
+\acro{CMC}{Kritische Mizellenkonzentration}
+\acro{MMA}{Methylmethacrylat}
+\acro{KPS}{Kaliumperoxodisulfat}
+\acro{VE-Wasser}{vollentsalztes Wasser}
+\end{acronym}
+\clearpage
+
+
+
+\subsection{Berechnung des Umsatzes}
+Um den Umsatz zu berechnen stehen mehrere Wege offen. Im folgenden wird der Umsatz sowohl mithilfe gravimetrische Mittel, als auch über den 
+Reaktionswärmestrom berechnet.
+\subsubsection{Berechnung auf gravimetrischen Weg}
+Zur Bestimmung des Umsatzes wurden während Reaktion 11 Proben entnohmen und die Masse an enthaltenem Polymer bestimmt (Tabelle \ref{tab:gravimetrie}). 
+Zunächst wird die Masse des Polymers in Lösung bestimmt. Dazu wird die Probenmasse mit dem Verhältnis von Volumen von Lösung zu Probe multipliziert.
+
+\begin{equation}
+    m\subtxt{Polymer} = \frac{V\subtxt{Lösung}\cdot m\subtxt{Probe}}{V\subtxt{Probe}}
+\end{equation}
+Mit Probe 1 ergibt sich:
+\begin{align*}
+     m\subtxt{Polymer} &= \frac{(V\subtxt{Wasser}+ V\subtxt{Monomer}+V\subtxt{Initiator}+V\subtxt{Tensid}-V\subtxt{entnommenes Volumen})\cdot m\subtxt{Probe}}{V\subtxt{Probe}}\\
+      &=\frac{(\SI{180}{\milli\liter}+ \SI{27}{\milli\liter}+\SI{5}{\milli\liter} +\SI{27}{\milli\liter}\footnote{Wie zuvor angegeben, wurde das genaue Volumen nicht bestimmt.} - \SI{0}{\milli\liter}
+)\cdot \SI{0.041}{\gram}}{\SI{2}{\milli\liter}}\\
+&= \SI{4.8995}{\gram}
+\end{align*}
+Zur Berechnung des Umsatzes wird weiterhin die Masse des eingesetztes Monomers benötigt.
+\begin{align}
+    m\subtxt{0, MMA} &= V\subtxt{MMA} \cdot \rho\subtxt{MMA}\\
+    &= \SI{27}{\milli\liter}\cdot \SI{0.94}{\gram\per\milli\liter}\nonumber\\
+    &= \SI{25.38}{\gram}\nonumber
+\end{align}
+Der Umsatz lässt sich über das Verhältnis von polymerisierter Masse zur ursprünglichen Monomermasse berechnen.
+\begin{equation}
+    X\subtxt{grav} = \frac{m\subtxt{Polymer}}{m\subtxt{0, MMA}}
+\end{equation}
+Für Probe 1 ergibt dies
+\begin{align*}
+    X\subtxt{grav} &= \frac{\SI{4.8995}{\gram}}{\SI{25.38}{\gram}}\\
+    &= 0.193
+\end{align*}
+Analog wird für alle Proben verfahren. Eine Auftragung gegen die Reaktionszeit ist in Abbildung \ref{fig:umsatz_zeit} zu sehen.
+
+\begin{figure}
+    \centering
+   % \includegraphics[width=.9\linewidth]{umsatz_zeit.pdf}
+   \caption{Gravimetrisch bestimmter Umsatz im Reaktionsverlauf.}
+   \label{fig:umsatz_zeit}
+\end{figure}
+\begin{sidewaystable}
+    \centering
+    \caption{Massen der Proben der gravimetrischen Umsatzbestimmung.}
+    \sisetup{round-mode=figures}
+\begin{tabular}{rccccc}
+\toprule
+ Messung & Reaktionszeit [\unit{\min}] &   Volumen der Lösung [mL] & Masse der Probe [\unit{\gram}]&Masse des Polymers [\unit{\gram}]               & Umsatz                                       \\
+\midrule
+  1 &  2 & 239 & \num[round-precision=2]{0.04100000000000037} & \num[round-precision=2]{4.899500000000044}  & \num[round-precision=2]{0.19304570527974957} \\
+  2 &  4 & 237 & \num[round-precision=2]{0.04640000000000022} & \num[round-precision=2]{5.498400000000026}  & \num[round-precision=2]{0.21664302600472915} \\
+  3 &  6 & 235 & \num[round-precision=2]{0.07699999999999996} & \num[round-precision=2]{9.047499999999996}  & \num[round-precision=2]{0.35648148148148134} \\
+  4 &  8 & 233 & \num[round-precision=2]{0.10740000000000016} & \num[round-precision=2]{12.512100000000018} & \num[round-precision=2]{0.49299054373522533} \\
+  5 & 10 & 231 & \num[round-precision=2]{0.1396999999999995}  & \num[round-precision=2]{16.135349999999942} & \num[round-precision=2]{0.6357505910165462}  \\
+  6 & 12 & 229 & \num[round-precision=2]{0.1515999999999984}  & \num[round-precision=2]{17.35819999999982}  & \num[round-precision=2]{0.6839322301024358}  \\
+  7 & 14 & 227 & \num[round-precision=2]{0.1700999999999997}  & \num[round-precision=2]{19.306349999999966} & \num[round-precision=2]{0.7606914893617008}  \\
+  8 & 16 & 225 & \num[round-precision=2]{0.17249999999999943} & \num[round-precision=2]{19.406249999999936} & \num[round-precision=2]{0.7646276595744655}  \\
+  9 & 18 & 223 & \num[round-precision=2]{0.18230000000000146} & \num[round-precision=2]{20.326450000000165} & \num[round-precision=2]{0.8008845547675401}  \\
+ 10 & 20 & 221 & \num[round-precision=2]{0.18100000000000094} & \num[round-precision=2]{20.000500000000102} & \num[round-precision=2]{0.7880417651694288}  \\
+ 11 & 25 & 219 & \num[round-precision=2]{0.1772000000000009}  & \num[round-precision=2]{19.4034000000001}   & \num[round-precision=2]{0.7645153664302641}  \\
+\bottomrule
+\end{tabular}
+\label{tab:gravimetrie}
+\end{sidewaystable}
+ 
+
+
+\end{document}
